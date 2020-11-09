@@ -3,9 +3,7 @@ from typing import List
 
 
 def removeElement(nums: List[int], val: int) -> int:
-    """
-    Do not return anything, modify nums1 in-place instead.
-    """
+
     j = 0
     for i in nums:
         if i == val:

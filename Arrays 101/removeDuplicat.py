@@ -3,9 +3,6 @@ from typing import List
 
 
 def removeDuplicates(nums: List[int]) -> int:
-    """
-    Do not return anything, modify nums1 in-place instead.
-    """
 
     i = 0
     while i < len(nums)-1:
