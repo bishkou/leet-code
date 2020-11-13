@@ -2,7 +2,6 @@ from typing import List
 
 
 def moveZeroes(nums: List[int]) -> None:
-    # redo the whole code
     j = 0
     i = 0
     while i < len(nums):
