@@ -12,6 +12,4 @@ def heightChecker(heights: List[int]) -> int:
 
 if __name__ == '__main__':
     nums = [1,1,4,2,1,3]
-    # moveZeroes(nums)
     print(heightChecker(nums))
-    # print(nums)
