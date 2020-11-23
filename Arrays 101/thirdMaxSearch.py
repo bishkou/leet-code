@@ -8,16 +8,7 @@ def thirdMax(nums: List[int]) -> int:
         return max(nums)
     count = 0
     p = 0
-    for i in nums:
-        if i > maxi:
-            if count == 0:
-                p = i
-            maxi = i
-            count += 1
-            if count == 3:
-                return p
-    print("her")
-    return maxi
+    
 
 
 if __name__ == '__main__':
