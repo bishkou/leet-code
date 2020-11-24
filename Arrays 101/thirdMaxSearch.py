@@ -3,14 +3,22 @@ from typing import List
 
 def thirdMax(nums: List[int]) -> int:
     nums.sort()
-    maxi = 0
     if len(nums) < 3:
         return max(nums)
-    count = 0
-    p = 0
-    
+    count = 1
+    maxi = nums[-1]
+    for i in range(len(nums)-1, -1, -1):
+        if nums[i] < maxi:
+            maxi = nums[i]
+            count += 1
+            if count == 3:
+
+                return nums[i]
+
+    return nums[-1]
+
 
 
 if __name__ == '__main__':
-    nums = [1,2,2,5,3,5]
+    nums = [3,2,1]
     print(thirdMax(nums))
