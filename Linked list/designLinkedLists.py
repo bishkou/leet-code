@@ -42,3 +42,10 @@ class MyLinkedList:
         Delete the index-th node in the linked list, if the index is valid.
         """
 
+# Your MyLinkedList object will be instantiated and called as such:
+# obj = MyLinkedList()
+# param_1 = obj.get(index)
+# obj.addAtHead(val)
+# obj.addAtTail(val)
+# obj.addAtIndex(index,val)
+# obj.deleteAtIndex(index)
