@@ -4,7 +4,6 @@ class ListNode:
         self.val = x
         self.next = None
 
-
 class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
         if head is None:
