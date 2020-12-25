@@ -9,7 +9,6 @@ class Solution:
     def oddEvenList(self, head: ListNode) -> ListNode:
         if head is None:
             return None
-
         odd = head
         even = head.next
         evenHead = even
