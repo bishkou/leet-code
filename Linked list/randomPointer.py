@@ -9,48 +9,19 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
 
-        h = head.next
-        new = Node(head.val)
-        nuc = new
-        while h:
-            n = Node(h.val)
-            nuc.next = n
-            nuc = nuc.next
-            h = h.next
+        deep_copy_dict = {}
+        if not head:
+            return None
+        current_node = head
+        while current_node:
+            deep_copy_dict[current_node] = Node(current_node.val, None, None)
+            current_node = current_node.next
+        current_node = head
+        while current_node:
+            if current_node.next:
+                deep_copy_dict[current_node].next = deep_copy_dict.get(current_node.next)
+            if current_node.random:
+                deep_copy_dict[current_node].random = deep_copy_dict.get(current_node.random)
+            current_node = current_node.next
 
-        h = head
-        n = new
-        i = 0
-
-        while h and n:
-            temp = h.random
-            k = head
-            j = 0
-
-            while k:
-                if k == temp:
-                    break
-                k = k.next
-                j += 1
-
-            if j < i:
-                m = new
-                c = 0
-            else:
-                m = n
-                c = i
-
-            while m:
-                if c == j:
-                    n.random = m
-                    break
-
-                c += 1
-                m = m.next
-
-            i += 1
-            h = h.next
-            n = n.next
-
-
-        return new
+        return deep_copy_dict.get(head)
