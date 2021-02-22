@@ -9,3 +9,4 @@ class Solution(object):
                 ans.append(i - anchor + 1)
                 anchor = i + 1
         return ans
+
